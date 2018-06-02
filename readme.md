@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="https://github.com/retinas/selp/blob/master/Assets/retinas.png" width="400">
+</p>
+
 # Introducing
 
 <p align="left">
