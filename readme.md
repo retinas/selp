@@ -2,7 +2,7 @@
   <img src="https://github.com/retinas/selp/blob/master/Assets/retinas.png" width="150">
 </p> 
 
-# Introducing Open Source Platform
+# Introducing
 
 <p align="left">
   <img src="https://github.com/retinas/selp/blob/master/Assets/Selpnew%402x.png" width="800">
