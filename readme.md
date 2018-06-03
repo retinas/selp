@@ -24,3 +24,4 @@ Thanks to the contributions of all shareholders, out of school numbers are decre
 There is also refugee education crisis in the world.Our country (Turkey) is home to 1.3 Million child refugees; it makes us the top child refugee-hosting country in the world. In the refugee society enrollment rate for the school is %56 in Turkey.
 
 We would like to help, contribute and accelerate this layover by innovating and developing a new way of open source technological solution. This is why we begin to develop VR based Social and Emotional Learning Platform.
+asdasads
