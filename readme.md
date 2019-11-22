@@ -2,7 +2,7 @@
   <img src="https://github.com/retinas/selp/blob/master/Assets/retinas.png" width="150">
 </p> 
 
-# Introducing
+# Introducing / SELP www.selpvr.com
 
 <p align="left">
   <img src="https://github.com/retinas/selp/blob/master/Assets/Selpnew%402x.png" width="800">
