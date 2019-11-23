@@ -1,0 +1,9 @@
+// Storing data:
+myObj = {name: "SELP", age: 1 sm, xhar: "User"};
+myJSON = JSON.stringify(myObj);
+localStorage.setItem("testJSON", myJSON);
+
+// Retrieving data:
+text = localStorage.getItem("testJSON");
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML = obj.name;
