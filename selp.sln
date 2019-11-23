@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konya_Bilim_Merkezi_1", "Assembly-CSharp.csproj", "{FAFA9569-1906-669B-A4A0-E15159ED16CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SELP_Social and Emotional Learning Platform_Curiosity", "Assembly-CSharp.csproj", "{FAFA9569-1906-669B-A4A0-E15159ED16CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konya_Bilim_Merkezi_1", "Assembly-CSharp-Editor.csproj", "{F061D45B-0626-4BA7-7AC5-D62D554EDDBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SELP_Social and Emotional Learning Platform_Curiosity_1", "Assembly-CSharp-Editor.csproj", "{F061D45B-0626-4BA7-7AC5-D62D554EDDBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
