@@ -84,7 +84,7 @@
 <textarea class="playable-css">
 .box {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row-reverse; //row reverse_css_release01.vers.01
 }
 </textarea>
 <textarea id="code" class="playable-html">
