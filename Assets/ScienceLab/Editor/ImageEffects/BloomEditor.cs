@@ -9,9 +9,7 @@ namespace UnityStandardAssets.ImageEffects
     {
         SerializedProperty tweakMode;
         SerializedProperty screenBlendMode;
-
         SerializedObject serObj;
-
         SerializedProperty hdr;
         SerializedProperty quality;
         SerializedProperty sepBlurSpread;
@@ -104,9 +102,13 @@ namespace UnityStandardAssets.ImageEffects
             if (1 == tweakMode.intValue) {
                 // further lens flare tweakings
                 if (0 != tweakMode.intValue)
+                {
                     EditorGUILayout.PropertyField (lensflareMode, new GUIContent("Lens Flares"));
+                }
                 else
+                {
                     lensflareMode.enumValueIndex = 0;
+                }
 
                 EditorGUILayout.PropertyField (lensflareIntensity, new GUIContent(" Local Intensity", "0 disables lens flares entirely (optimization)"));
                 lensflareThreshold.floatValue = EditorGUILayout.Slider ("Threshold", lensflareThreshold.floatValue, 0.0f, 4.0f);
