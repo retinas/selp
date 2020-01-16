@@ -1,0 +1,22 @@
+<h2>Tüm Cihazlar</h2>
+
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Model</th>
+        <th>Cihaz Numarası</th>
+        <th>Firma Adı</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let device of vm.devices;let i = index;" style="cursor: pointer;">
+        <td>{{ i+1 }}</td>
+        <td>{{ device.model }}</td>
+        <td>{{ device.deviceNumber }}</td>
+        <td>{{ device.companyName }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

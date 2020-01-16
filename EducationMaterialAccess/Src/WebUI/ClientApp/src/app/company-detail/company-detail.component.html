@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card-box">
+          <div class="row">
+            <div class="col-12">
+              <div class="p-2">
+                <form #form="ngForm" class="form form-horizontal" autocomplete="off" (submit)="onSubmit(form)">
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="txtName">Kurum Adı</label>
+                    <div class="col-sm-9">
+                      <input type="text" name="name" id="txtName" class="form-control" [(ngModel)]="companyDetailVm.companyName" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="txtAddress">Kurum Adresi</label>
+                    <div class="col-sm-9">
+                      <input type="text" name="address" id="txtAddress" class="form-control" [(ngModel)]="companyDetailVm.companyAdress" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="txtProvince">Kurumun Bulunduğu İl-İlçe</label>
+                    <div class="col-sm-9">
+                      <input type="text" name="province" id="txtProvince" class="form-control" [(ngModel)]="companyDetailVm.companyProvince" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="txtTaxOffice">Kurum Vergi Dairesi</label>
+                    <div class="col-sm-9">
+                      <input type="text" name="taxOffice" id="txtTaxOffice" class="form-control" [(ngModel)]="companyDetailVm.companyTaxOffice" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="txtVat">Kurum Vergi No</label>
+                    <div class="col-sm-9">
+                      <input type="text" name="vat" id="txtVat" class="form-control" [(ngModel)]="companyDetailVm.companyVAT" required>
+                    </div>
+                  </div>
+
+
+                  <div class="button-list justify-content-right">
+                    <button id="btnSave" type="button" class="btn btn-primary" [disabled]='!form.valid' (click)="_clickBtnSave();">Kaydet</button>
+                    <button id="btnUpdate" type="button" class="btn btn-primary" *ngIf="showUpdateButton" [disabled]='!form.valid' (click)="_clickBtnUpdate();">Güncelle</button>
+                    <!--<button id="btnDelete" type="button" class="btn btn-danger" *ngIf="showDeleteButton" (click)="_clickBtnDelete();">Sil</button>-->
+                    <button id="btnClean" type="button" class="btn btn-warning" *ngIf="showSaveButton" (click)="_clickBtnClean();">Temizle</button>
+                    <button id="btnBackToList" type="button" class="btn btn-success" routerLink="/companyList">Listeye Dön</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

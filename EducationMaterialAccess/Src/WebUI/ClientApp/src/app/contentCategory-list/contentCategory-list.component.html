@@ -1,0 +1,20 @@
+<h2>Tüm Firmalar</h2>
+
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Kategori Adı</th>
+        <th>Kategori Kodu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contentCategory of vm.contentCategories;let i = index;" style="cursor: pointer;">
+        <td>{{ i+1 }}</td>
+        <td>{{ contentCategory.description }}</td>
+        <td>{{ contentCategory.code }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

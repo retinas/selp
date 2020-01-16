@@ -1,0 +1,97 @@
+<div class="wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card-box">
+          <div class="row">
+            <div class="col-12">
+              <div class="p-2">
+                <form #form="ngForm" class="form form-horizontal" autocomplete="off" (submit)="onSubmit(form)">
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="txtName">İçerik Adı</label>
+                    <div class="col-sm-9">
+                      <input type="text" name="contentTitle" id="txtContentTitle" class="form-control" [(ngModel)]="contentDetailVm.Title" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="txtAddress">Tanım</label>
+                    <div class="col-sm-9">
+                      <input type="text" name="description" id="txtDescription" class="form-control" [(ngModel)]="contentDetailVm.description" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="txtProvince">Kullanım Talimatı</label>
+                    <div class="col-sm-9">
+                      <input type="text" name="instrcutions" id="txtInstructions" class="form-control" [(ngModel)]="contentDetailVm.instructions" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="txtProvince">Kullanıcı Yeterliliği</label>
+                    <div class="col-sm-9">
+                      <input type="text" name="userCompetence" id="txtUserCompetence" class="form-control" [(ngModel)]="contentDetailVm.userCompetence" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="txtTaxOffice">Fiyat</label>
+                    <div class="col-sm-9">
+                      <input type="number" name="price" id="txtPrice" class="form-control" [(ngModel)]="contentDetailVm.price" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="cbCategory">Kategori</label>
+                    <div class="col-sm-9">
+                      <select name="companies" id="cbCategory" class="form-control" [(ngModel)]="contentDetailVm.contentCategoryId" required placeholder="d.ff">
+                        <option disabled hidden [value]="selectUndefinedOptionValue">Seçiniz</option>
+                        <option *ngFor="let contentCategory of contentCategoryListVm" [ngValue]="contentCategory.id">
+                          {{contentCategory.description}}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="cbDifficulty">Zorluk Seviyesi</label>
+                    <div class="col-sm-9">
+                      <select name="companies" id="cbDifficulty" class="form-control" [(ngModel)]="contentDetailVm.contentDifficultyId" required placeholder="d.ff">
+                        <option disabled hidden [value]="selectUndefinedOptionValue">Seçiniz</option>
+                        <option *ngFor="let contentDifficulty of contentDifficultyListVm" [ngValue]="contentDifficulty.id">
+                          {{contentDifficulty.description}}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="cbUserModes">Kullanıcı Modları</label>
+                    <div class="col-sm-9">
+                      <ng-select name="categories" id="cbUserModes" [multiple]="true" [(ngModel)]="contentDetailVm.userModeIds" required placeholder="Seçiniz">
+                        <ng-option *ngFor="let userMode of userModeListVm" [value]="userMode.id">{{userMode.description}}</ng-option>
+                      </ng-select>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="button-list justify-content-right">
+                    <button id="btnSave" type="button" class="btn btn-primary" [disabled]='!form.valid' (click)="_clickBtnSave();">Kaydet</button>
+                    <button id="btnUpdate" type="button" class="btn btn-primary" *ngIf="showUpdateButton" [disabled]='!form.valid' (click)="_clickBtnUpdate();">Güncelle</button>
+                    <!--<button id="btnDelete" type="button" class="btn btn-danger" *ngIf="showDeleteButton" (click)="_clickBtnDelete();">Sil</button>-->
+                    <button id="btnClean" type="button" class="btn btn-warning" *ngIf="showSaveButton" (click)="_clickBtnClean();">Temizle</button>
+                    <button id="btnBackToList" type="button" class="btn btn-success" routerLink="/companyList">Listeye Dön</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

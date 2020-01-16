@@ -1,0 +1,65 @@
+<header>
+  <nav
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+  >
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">Education Material Access</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+        aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded"
+        (click)="toggle()"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+        [ngClass]="{ show: isExpanded }"
+      >
+        <app-login-menu></app-login-menu>
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/contentDetails']">İçerik Ekle</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Firma İşlemleri</a>
+            <div class="dropdown-menu">
+              <a class="nav-link text-dark" [routerLink]="['/companyDetails']">Firma Ekle</a>
+              <a class="nav-link text-dark" [routerLink]="['/companyList']">Firma Listesi</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cihaz İşlemleri</a>
+            <div class="dropdown-menu">
+              <a class="nav-link text-dark" [routerLink]="['/deviceDetails']">Cihaz Ekle</a>
+              <a class="nav-link text-dark" [routerLink]="['/deviceList']">Cihaz Listesi</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Parametre Tanımları</a>
+            <div class="dropdown-menu">
+              <a class="nav-link text-dark" [routerLink]="['/subscriptionTypeDetails']">Abonelik Tipi Ekle</a>
+              <a class="nav-link text-dark" [routerLink]="['/subscriptionTypeList']">Abonelik Tipi Listesi</a>
+              <div class="dropdown-divider"></div>
+              <a class="nav-link text-dark" [routerLink]="['/userModeDetails']">Mod Ekle</a>
+              <a class="nav-link text-dark" [routerLink]="['/userModeList']">Mod Listesi</a>
+              <div class="dropdown-divider"></div>
+              <a class="nav-link text-dark" [routerLink]="['/contentDifficultyDetails']">Zorluk Ekle</a>
+              <a class="nav-link text-dark" [routerLink]="['/contentDifficultyList']">Zorluk Listesi</a>
+              <div class="dropdown-divider"></div>
+              <a class="nav-link text-dark" [routerLink]="['/contentCategoryDetails']">Kategori Ekle</a>
+              <a class="nav-link text-dark" [routerLink]="['/contentCategoryList']">Kategori Listesi</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

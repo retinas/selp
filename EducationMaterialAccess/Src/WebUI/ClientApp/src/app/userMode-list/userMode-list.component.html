@@ -1,0 +1,20 @@
+<h2>Tüm Modlar</h2>
+
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Mod Adı</th>
+        <th>Mod Kodu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let userMode of vm.userModes;let i = index;" style="cursor: pointer;">
+        <td>{{ i+1 }}</td>
+        <td>{{ userMode.description }}</td>
+        <td>{{ userMode.code }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
