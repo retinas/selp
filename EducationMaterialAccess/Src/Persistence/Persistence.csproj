@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200106120003_ContentArrangements.cs" />
+    <Compile Remove="Migrations\20200106120003_ContentArrangements.Designer.cs" />
+    <Compile Remove="Migrations\20200106121616_AddingNewTablesAndRelations.cs" />
+    <Compile Remove="Migrations\20200106121616_AddingNewTablesAndRelations.Designer.cs" />
+    <Compile Remove="Migrations\20200106121912_AddedNewTablesRelatedToContentTable.cs" />
+    <Compile Remove="Migrations\20200106121912_AddedNewTablesRelatedToContentTable.Designer.cs" />
+    <Compile Remove="Migrations\20200106122645_AddedNewTablesRelatedToContentTableFix.cs" />
+    <Compile Remove="Migrations\20200106122645_AddedNewTablesRelatedToContentTableFix.Designer.cs" />
+    <Compile Remove="Migrations\20200106125234_AddedAuditableTOMoreTables.cs" />
+    <Compile Remove="Migrations\20200106125234_AddedAuditableTOMoreTables.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
+  </ItemGroup>
+
+</Project>
